@@ -2,10 +2,10 @@
 title: "HW 04 - What should I major in?"
 author: "Your Name"
 output: 
-  tufte::tufte_html:
-    css: ../lab.css
-    tufte_variant: "envisioned"
-    highlight: pygments
+  #tufte::tufte_html:
+    #css: ../lab.css
+    #tufte_variant: "envisioned"
+   # highlight: pygments
   tufte::tufte_handout:
     latex_engine: xelatex
     highlight: pygments
@@ -197,7 +197,7 @@ college_recent_grads %>%
             q3 = quantile(median, probs = 0.75))
 ```
 
-4.  Based on the shape of the histogram you created in the previous exercise, determine which of these summary statistics is useful for describing the distribution.
+4.  Based on the shape of the histogram you created in the previous exercise, determine which of these summary statistics is useful for describing the distribution. I would argue the median is a good statistic for describing the distribution
     Write up your description (remember shape, center, spread, any unusual observations) and include the summary statistic output as well.
 
 5.  Plot the distribution of `median` income using a histogram, faceted by `major_category`.
@@ -206,7 +206,7 @@ college_recent_grads %>%
 Now that we've seen the shapes of the distributions of median incomes for each major category, we should have a better idea for which summary statistic to use to quantify the typical median income.
 
 6.  Which major category has the highest typical (you'll need to decide what this means) median income? Use the partial code below, filling it in with the appropriate statistic and function. Also note that we are looking for the highest statistic, so make sure to arrange in the correct direction.
-
+Just above the 30,000 range.
 ```{r eval=FALSE}
 college_recent_grads %>%
   group_by(major_category) %>%
