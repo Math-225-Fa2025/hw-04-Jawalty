@@ -272,14 +272,24 @@ college_recent_grads %>%
   )
 ```
 
-8.  Which STEM majors have median salaries equal to or less than the median for all majors' median earnings? Your output should only show the major name and median, 25th percentile, and 75th percentile earning for that major as and should be sorted such that the major with the highest median earning is on top.
+8.  Which STEM majors have median salaries equal to or less than the median for all majors' median earnings? Your output should only show the major name and median, 25th percentile, and 75th percentile earning for that major as and should be sorted such that the major with the highest median earning is on top. Biology and Life sciences
 
 🧶 ✅ ⬆️ Knit, *commit, and push your changes to GitHub with an appropriate commit message. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
 
 ## What types of majors do women tend to major in?
 
 9.  Create a scatterplot of median income vs. proportion of women in that major, coloured by whether the major is in a STEM field or not. Describe the association between these three variables.
-
+```{scatterplot}
+ggplot(college_majors, aes(x = sharewomen, y = median, color = major_category_stem)) +
+  geom_point(alpha = 0.6) +
+  labs(
+    title = "Median Income vs. Proportion of Women by STEM Status",
+    x = "Proportion of Women in Major",
+    y = "Median Income ($)",
+    color = "STEM Field"
+  ) +
+  theme_minimal()
+```
 ## Further exploration
 
 10. Ask a question of interest to you, and answer it using summary statistic(s) and/or visualization(s).
